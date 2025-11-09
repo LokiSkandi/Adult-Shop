@@ -42,13 +42,13 @@ public class ShoppingCartTest {
         List<Product> additionalProducts = new ArrayList<>();
         additionalProducts.add(lingerieFactory.createProduct(56, "Бельё", 6, Size.S, "red"));
         additionalProducts.add(lingerieFactory.createProduct(55, "Бельё", 6, Size.S, "blue"));
+
         Product p3 = giftSet.builder()
                 .mainProduct(mainProduct)
                 .additionalProducts(additionalProducts)
                 .hasGiftWrap(true)
                 .cardMessage("Сюрприз!")
                 .build();
-
         double price = 73.0;
 
         cart.addProduct(p1);
