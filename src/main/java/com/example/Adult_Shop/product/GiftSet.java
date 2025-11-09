@@ -42,4 +42,16 @@ public class GiftSet extends Product {
     public GiftSet() {
         super();
     }
+
+    @Override
+    public double getPrice() {
+
+        double totalPrice = mainProduct.getPrice();
+        if (additionalProducts != null) {
+            for (Product product : additionalProducts) {
+                totalPrice += product.getPrice();
+            }
+        }
+        return totalPrice;
+    }
 }
