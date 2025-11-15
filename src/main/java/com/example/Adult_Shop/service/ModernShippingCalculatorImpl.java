@@ -13,8 +13,8 @@ public class ModernShippingCalculatorImpl implements ModernShippingCalculator {
 
     @Override
     public double calculatePrice(int postcode, double weightInGrams) {
-        weightInGrams = legacyShippingService.calculateShippingCost("",1) * 453,59;
-        return weightInGrams;
+        double weightInPounds =  weightInGrams * 453.5;
+        return legacyShippingService.calculateShippingCost(String.valueOf(postcode), weightInPounds);
     }
 
 
